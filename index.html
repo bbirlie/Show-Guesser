@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Much Show</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <h2>Documentation</h2>
+            <h3>Rules</h3>
+            <p>
+                Click "Get Show" to get started and the application will load a random TV show title from the TVMaze
+                API.
+            </p>
+            <p>
+                From there you will have the option to guess how many seasons and episode the show contains. There are a
+                total of 5 guesses and 3 rounds. After the first guess the hint section will update and tell you if you
+                need to guess higher (+) or lower (-). The border on the input sections will also be changed based on if
+                the guess is correct (green), wrong (red), or within 1 (yellow).
+            </p>
+            <p>
+                The reset button can be used at any time to bring the game state back to the beginning.
+            </p>
+            <h3>Help</h3>
+            <p>
+                As it is quite hard to guess how many episodes a TV show has you can click the boxes, after one
+                guess
+                to have the answers shown.
+            </p>
+            <p>
+                WARNING: on subsequent rounds this will only update after the first guess has
+                been made.
+            </p>
+            <div id="sBox" class="hideAnswer">S</div>
+            <div id="eBox" class="hideAnswer">E</div>
+        </section>
+        <section>
+            <h1>How Much Show</h1>
+            <p>Put your TV knowledge to the test!</p>
+            <p>
+                Click Get Show to get started and then enter your guesses for how many seasons and episodes the title
+                has!
+            </p>
+            <img src="./images/free-vector-blue-texture-halftone-background.jpg" alt="space-holder-img" id="showImg">
+            <h3 id="titleSpace">Click below to get started</h3>
+            <button id="movieButton">Get Show</button>
+            <form id="guessForm" class="none" action="">
+                <div class="inputs">
+                    <input type="text" id="seasonInput" placeholder="Seasons">
+                    <input type="text" id="episodeInput" placeholder="Episodes">
+                </div>
+                <div id="logicButtons">
+                    <button id="submit" type="submit">Submit</button>
+                    <button id="reset" type="reset" class="inverse">Reset</button>
+                </div>
+            </form>
+        </section>
+        <section class="stateContainer">
+            <div>
+                <h2>Game State</h2>
+                <h3>Round</h3>
+                <p id="roundDisplay">X</p>
+            </div>
+            <div>
+                <h3>Guesses</h3>
+                <div id="guessTracker">
+                    <div class="guessBox"></div>
+                    <div class="guessBox"></div>
+                    <div class="guessBox"></div>
+                    <div class="guessBox"></div>
+                    <div class="guessBox"></div>
+                </div>
+            </div>
+            <div>
+                <h3>Hints</h3>
+                <div id="hintContainer">
+                    <div id="seasonHint" class="hintBox">S</div>
+                    <div id="episodeHint" class="hintBox">E</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
